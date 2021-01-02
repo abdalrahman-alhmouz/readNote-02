@@ -8,4 +8,10 @@ An object literal can also include functions among its members. Those functions 
 ![object](https://lh3.googleusercontent.com/proxy/X4ZJ54Xs7Mkvh_7ulBeUccKYeRQfIE4vwPhebk3SmNz7inaPSvsNA250pLGRWs43VCdoUkc22OEw3NduE-0m9UuWDu-hPQ)
 
  ### Document Object Model :
- * 
+ * The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. ... The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.
+
+ - What is the DOM?
+The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.
+* In the beginning, JavaScript and the DOM were tightly intertwined, but eventually, they evolved into separate entities. 
+ - The page content is stored in the DOM and may be accessed and manipulated via JavaScript, so that we may write this approximative equation:
+![doc](https://simplesnippets.tech/wp-content/uploads/2018/10/what-is-document-object-model-in-JS-featured-image.jpg)
