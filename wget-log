@@ -1,0 +1,7 @@
+--2021-02-11 01:54:28--  https://update.code.visualstudio.com/commit:5d424b828ada08e1eb9f95d6cb41120234ef57c7/server-linux-x64/stable
+Resolving update.code.visualstudio.com (update.code.visualstudio.com)... 192.168.1.1
+Connecting to update.code.visualstudio.com (update.code.visualstudio.com)|192.168.1.1|:443... connected.
+ERROR: cannot verify update.code.visualstudio.com's certificate, issued by ‘emailAddress=zane@zte.com.cn,CN=ZTE-ROOT-CA,OU=Wireline Product R&D Institute,O=ZTE,L=Shenzhen,ST=GuangDong,C=CN’:
+  Unable to locally verify the issuer's authority.
+    ERROR: certificate common name ‘192.168.1.1’ doesn't match requested host name ‘update.code.visualstudio.com’.
+To connect to update.code.visualstudio.com insecurely, use `--no-check-certificate'.
