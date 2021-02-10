@@ -34,6 +34,8 @@ div {
 # 3D transform functions
 
 ![](https://gutenberghub.com/wp-content/uploads/2020/01/Screen-Recording-2020-01-18-at-01.38-PM.gif)
+![](https://gutenberghub.com/wp-content/uploads/2020/01/Screen-Recording-2020-01-18-at-01.38-PM.gif)
+
 
 > As a web designer, you’re probably well acquainted with working in two dimensions, `X `and `Y`, positioning items horizontally and vertically.
 > With a 3D space initialized with perspective, we can now transform elements in three spatial dimensions with the third Z dimension.
