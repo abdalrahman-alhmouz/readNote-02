@@ -9,7 +9,7 @@ Responsive web design is the practice of building a website suitable to work on 
 **Responsive** 
 1. generally means to react quickly and positively to any change 
 2. With responsive design websites continually and fluidly change based on different factors
- while
+ while.
  **adaptive** 
  1. means to be easily modified for a new purpose or situation
  2. adaptive websites are built to a group of preset factors
