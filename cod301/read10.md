@@ -13,7 +13,7 @@ is a mechanism for an interpreter (like the JavaScript interpreter in a web brow
 When the code is run if we get an error, A stack is printed showing how the functions are stack on top each other.
 *Take a look at the diagram*
 
-![image](img/error.png)
+![image](https://cdn-media-1.freecodecamp.org/images/zOINLHPC8E56ac8yyINYOFWeImsjM2Wk2rdU)
 
 ## What causes a stack overflow?
 
