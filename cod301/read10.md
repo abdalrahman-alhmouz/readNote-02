@@ -8,7 +8,7 @@ is a mechanism for an interpreter (like the JavaScript interpreter in a web brow
 3. When the current function is finished, the interpreter takes it off the stack and resumes execution where it left off in the last code listing.
 4. If the stack takes up more space than it had assigned to it, it results in a "stack overflow" error.
 
-![image](img/call.png)
+![image](https://miro.medium.com/max/638/1*CCHexfHNCNo-f8aw3rbRew.jpeg)
 
 When the code is run if we get an error, A stack is printed showing how the functions are stack on top each other.
 *Take a look at the diagram*
