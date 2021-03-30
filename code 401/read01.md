@@ -18,7 +18,7 @@
 * To compile this program type the command shown below on your command prompt and press enter.
 
 
-#### jaav Documntation :
+#### java Documntation :
 *To create the API documentation, the captains of Java ran a program called javadoc. The javadoc program took lines like these right out of the PrintStream.java file and used the lines to make the documentation that you see in your web browser.
 
 - Other Java programmers do the same thing. In fact, everyone who writes Java code uses the javadoc program to generate documentation. So everyone’s Java documentation looks like  - everyone else’s Java documentation. When you know how read to the standard API documentation, you know how to read anybody’s homegrown Java docs.
