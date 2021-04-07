@@ -2,7 +2,7 @@
  * A Linked List is a sequence of Nodes that are connected/linked to each other .
  
  ##### types of Linked List : 
- ![type]https://miro.medium.com/max/700/1*AeMDLFUjR0w0J4n8CP4H6g.jpeg)
+ ![type](https://miro.medium.com/max/700/1*AeMDLFUjR0w0J4n8CP4H6g.jpeg)
  
  1 - Singly - Singly refers to the number of references the node has .
  ![singly](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-05/resources/images/LinkedList1.PNG)
