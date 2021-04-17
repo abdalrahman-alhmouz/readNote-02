@@ -7,3 +7,8 @@ A Spring MVC is a Java framework which is used to build web applications. It fol
 
 A Spring MVC provides an elegant solution to use MVC in spring framework by the help of DispatcherServlet. Here, DispatcherServlet is a class that receives the incoming request and maps it to the right resource such as controllers, models, and views.
 ![spring](https://static.javatpoint.com/sppages/images/spring-web-model-view-controller.png)
+* Add attribute to Model via its addAttribute method:
+![spring](https://kdiv.files.wordpress.com/2016/10/java_thymeleaf_2016-10-03-145757_767x530_scrot.png?w=640)
+* 
+
+    
