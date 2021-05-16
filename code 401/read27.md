@@ -19,3 +19,10 @@ When you declare an activity in your manifest file, you can specify how the acti
 2- Using Intent flags
 When you call startActivity(), you can include a flag in the Intent that declares how (or whether) the new activity should associate with the current task.
 
+ #### Save key-value data : 
+  * If you have a relatively small collection of key-values that you'd like to save, you should use the SharedPreferences APIs. A SharedPreferences object points to a file containing key-value pairs and provides simple methods to read and write them. Each SharedPreferences file is managed by the framework and can be private or shared.
+
+* Get a handle to shared preferences 
+*   1 -getSharedPreferences() — Use this if you need multiple shared preference files identified by name, which you specify with the first parameter. You can call this from any Context in your app.
+ 2 - getPreferences() — Use this from an Activity if you need to use only one shared preference file for the activity. Because this retrieves a default shared preference file that belongs to the activity, you don't need to supply a name.
+
