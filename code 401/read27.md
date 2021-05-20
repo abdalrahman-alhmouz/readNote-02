@@ -1,28 +1,30 @@
-### Task Is : 
-* A Collection of Activities That Users Interact With When Performing A Certain Job. The Activities are Arranged in a stack-the back stack) -in The Order in Which Each Activity is opened.
+## Android Tasks and the Back Stack
+- task is a stack of activities
+- Back button activity finished and popped off the stack
+- apps running simultaneously in a multi windowed environment the system manages tasks separately for each window.
+- Home screen is the starting place for most tasks. 
+- when current activity starts another the new activity is pushed on the top of the stack and takes focus. previous remains but is stopped. 
+- back stack operates as a LIFO object structure
+- Task is a cohesive unit that can move to the "background" when users begin a new task or go to the Home screen via the Home button.
+- A task can then return to the "foreground" so users can puck up where they left off.
+- Activities can be instantiated multiple times even from other tasks
+- Defining launch modes with manifest file or Intent flags
+- 4 launchMode attributes
+  - "standard": default, can be instantiated multiple times, can belong to fidderent taks and one taks can have multiple instances
+  - "singleTop": instance os the activity already exists at the top of the current task the system routes the intent to that instance through a call to its `onNewIntent()` method
+  - "singleTask": creates new task and instantiates the activity at the root of the new task. If already exists in a separate task the system routes the intent to the existing instance through a call to its `onNewIntent()`
+  - "singleInstance": same as "singleTask" except the system doesn't launch any other activities into the task holding the instance
 
-* When apps are running simultaneously in a multi-windowed environment, supported in Android 7.0 (API level 24) and higher, the system manages tasks separately for each window; each window may have multiple tasks. The same holds true for Android apps running on Chromebooks: the system manages tasks, or groups of tasks, on a per-window basis.
+  - Using Intent flags
+    - `FLAG_ACTIVITY_NEW_TASK`: start activity in a new task. If a task is already running for the activity you are not starting that task is brought to the foreground with its last state restored and the activity receives the new intent in `onNewIntent()`
+    - `FLAG_ACTIVITY_SINGLE_TOP`: If the activity being started is the current activity (at the top of the back stack), then the existing instance receives a call to `onNewIntent()`, instead of creating a new instance of the activity.
 
-The device Home screen is the starting place for most tasks. When the user touches an icon in the app launcher (or a shortcut on the Home screen), that app's task comes to the foreground. If no task exists for the app (the app has not been used recently), then a new task is created and the "main" activity for that app opens as the root activity in the stack.
+- Clearing the back stack
+  - If the user leaves a task for a long time, the system clears the task of all activities except the root activity. When the user returns to the task again, only the root activity is restored
 
-When the current activity starts another, the new activity is pushed on the top of the stack and takes focus. The previous activity remains in the stack, but is stopped. When an activity stops, the system retains the current state of its user interface. When the user presses the Back button, the current activity is popped from the top of the stack (the activity is destroyed) and the previous activity resumes (the previous state of its UI is restored). Activities in the stack are never rearranged, only pushed and popped from the stack—pushed onto the stack when started by the current activity and popped off when the user leaves it using the Back button. As such, the back stack operates as a "last in, first out" object structure. Figure 1 visualizes this behavior with a timeline showing the progress between activities along with the current back stack at each point in time.
- 
- ![app](https://developer.android.com/images/fundamentals/diagram_backstack.png)
- 
-  
- ### launch modes :
- Launch modes allow you to define how a new instance of an activity is associated with the current task. You can define different launch modes in two ways:
-
-1 - Using the manifest file
-When you declare an activity in your manifest file, you can specify how the activity should associate with tasks when it starts.
-
-2- Using Intent flags
-When you call startActivity(), you can include a flag in the Intent that declares how (or whether) the new activity should associate with the current task.
-
- #### Save key-value data : 
-  * If you have a relatively small collection of key-values that you'd like to save, you should use the SharedPreferences APIs. A SharedPreferences object points to a file containing key-value pairs and provides simple methods to read and write them. Each SharedPreferences file is managed by the framework and can be private or shared.
-
-* Get a handle to shared preferences 
-*   1 -getSharedPreferences() — Use this if you need multiple shared preference files identified by name, which you specify with the first parameter. You can call this from any Context in your app.
- 2 - getPreferences() — Use this from an Activity if you need to use only one shared preference file for the activity. Because this retrieves a default shared preference file that belongs to the activity, you don't need to supply a name.
-
+## Android SharedPreferences
+- `getSharedPreferences()` — Use this if you need multiple shared preference files identified by name, which you specify with the first parameter. You can call this from any Context in your app.
+- `getPreferences()` — Use this from an Activity if you need to use only one shared preference file for the activity. Because this retrieves a default shared preference file that belongs to the activity, you don't need to supply a name.
+- When naming your shared preference files, you should use a name that's uniquely identifiable to your app. An easy way to do this is prefix the file name with your application ID. For example: `"com.example.myapp.PREFERENCE_FILE_KEY"`
+- To write to a shared preferences file, create a `SharedPreferences`.Editor by calling `edit()` on your `SharedPreferences`.
+- To retrieve values from a shared preferences file, call methods such as `getInt()` and `getString()`, providing the key for the value you want, and optionally a default value to return if the key isn't present. 
