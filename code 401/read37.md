@@ -1,5 +1,4 @@
 ## Intro to Amazon S3
-- https://docs.aws.amazon.com/AmazonS3/latest/dev/Introduction.html 
 - Simple Storage Service
 - has a simple web services interface that can be used to store and retrieve any amout of data at any time anywhere 
 - focuses on simplicity and robustness
