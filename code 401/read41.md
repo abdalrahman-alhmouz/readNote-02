@@ -3,3 +3,4 @@
 - add intent fileter element in your manifest file for the correstponding activity element
 - To decide what action to take in an activity youw can read the `Intent` 
 - to return result you must specify a result code. 
+![intent filter](https://tutorial.eyehunts.com//wp-content/uploads/2018/06/what-is-android-Intent-Filters-examples.png)
